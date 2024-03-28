@@ -16,7 +16,7 @@
 
 <body class="font-sans antialiased dark:bg-black dark:text-white/50">
     <div class="container">
-        <livewire:user-list lazy />
+        <livewire:user-list lazy search="conroy" />
         {{-- @livewire('user-list', ['lazy' => true]) --}}
     </div>
 </body>

@@ -13,10 +13,17 @@ class UserList extends Component
 
     public ?string $search = null;
 
+    public function mount(string $search = null): void
+    {
+        //this method is called when the component is initialized
+        $this->search = $search;
+    }
+    
     public function placeholder(): View
     {
         return view('loading');
     }
+    
     public function render(): View
     {
         $users = User::latest()
