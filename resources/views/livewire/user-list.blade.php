@@ -1,6 +1,6 @@
 <div wire:poll.3s>
     <div class="d-flex align-items-start  my-3">
-        <h1 class="d-inline">Users List</h1> <span class=" badge text-bg-primary rounded-pill">{{ $total }}</span>
+        <h1 class="d-inline">Users List</h1> <span class=" badge text-bg-primary rounded-pill">{{ $this->users->total() }}</span>
     </div>
     <div class="input-group mb-3">
         <span class="input-group-text"><i class="bi bi-search"></i></span>
@@ -10,7 +10,7 @@
         </div>
     </div>
     <ol class="list-group list-group">
-        @forelse ($users as $user)
+        @forelse ($this->users as $user)
             <li class="list-group-item d-flex justify-content-between align-items-start">
                 <div class="ms-2 me-auto">
                     <div class="fw-bold">{{ $user->name }}</div>
@@ -27,6 +27,6 @@
         @endforelse
     </ol>
     <div class="mt-2">
-        {{ $users->links() }}
+        {{ $this->users->links() }}
     </div>
 </div>
