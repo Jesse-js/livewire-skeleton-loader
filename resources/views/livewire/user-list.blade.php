@@ -5,7 +5,7 @@
     <div class="input-group mb-3">
         <span class="input-group-text"><i class="bi bi-search"></i></span>
         <div class="form-floating">
-            <input type="text" class="form-control" wire:model.live="search" placeholder="Search user...">
+            <input type="text" class="form-control" wire:model.live.throttle.500ms="search" placeholder="Search user...">
             <label for="floatingInputGroup1">Search user..</label>
         </div>
     </div>
